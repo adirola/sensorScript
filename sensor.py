@@ -49,7 +49,7 @@ if __name__ == '__main__':
             print("script started")
             dist = distance()
             print("distance DONE")
-            print(distance)
+            print(dist)
             empty = 'true'
             if (dist < 10):
             	empty = 'false'
