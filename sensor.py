@@ -1,6 +1,9 @@
+
 #Libraries
 import RPi.GPIO as GPIO
 import time
+import requests 
+import json
  
 #GPIO Mode (BOARD / BCM)
 GPIO.setmode(GPIO.BCM)
@@ -43,8 +46,15 @@ def distance():
 if __name__ == '__main__':
     try:
         while True:
+            print("script started")
             dist = distance()
-            print ("Measured Distance = %.1f cm" % dist)
+            print("distance DONE")
+            print(distance)
+            empty = 'true'
+            if (dist < 10):
+            	empty = 'false'
+            data={'space': dist , 'isEmpty' : empty}
+			# r = requests.put('http://finalyearproject.southindia.cloudapp.azure.com:8080/api/parking/58d388afa6e3d7355ce81aa9',data=data)
             time.sleep(1)
  
         # Reset by pressing CTRL + C
