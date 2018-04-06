@@ -48,6 +48,8 @@ if __name__ == '__main__':
         while True:
             print("script started")
             dist = distance()
+            print("distance DONE")
+            print(distance)
             empty = 'true'
             if (dist < 10):
             	empty = 'false'
