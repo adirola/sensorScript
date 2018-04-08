@@ -54,7 +54,7 @@ if __name__ == '__main__':
             if (dist < 10):
             	empty = 'false'
             data={'space': dist , 'isEmpty' : empty}
-            r = requests.put('http://finalyearproject.southindia.cloudapp.azure.com:8080/api/parking/58d388afa6e3d7355ce81aa9',data=data)
+            # r = requests.put('http://finalyearproject.southindia.cloudapp.azure.com:8080/api/parking/58d388afa6e3d7355ce81aa9',data=data)
             time.sleep(1)
  
         # Reset by pressing CTRL + C
