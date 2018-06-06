@@ -9,7 +9,7 @@ import json
 GPIO.setmode(GPIO.BCM)
  
 #set GPIO Pins
-GPIO_TRIGGER = 18
+GPIO_TRIGGER = 21
 GPIO_ECHO = 24
  
 #set GPIO direction (IN / OUT)
@@ -51,7 +51,7 @@ if __name__ == '__main__':
             print("distance DONE")
             print(dist)
             empty = 'true'
-            if (dist < 10):
+            if (dist < 30):
             	empty = 'false'
             data={'space': dist , 'isEmpty' : empty}
             # r = requests.put('http://finalyearproject.southindia.cloudapp.azure.com:8080/api/parking/58d388afa6e3d7355ce81aa9',data=data)
